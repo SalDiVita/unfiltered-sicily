@@ -1,0 +1,92 @@
+/*
+Theme Name:   Unmapped Sicily
+Theme URI:    https://unmappedsicily.com
+Description:  Child theme di Kadence per unmappedsicily.com. Base pulita e modulare, pronta da estendere con i template degli archivi tassonomia (destination, theme) e i term meta.
+Author:       Unmapped Sicily
+Author URI:   https://unmappedsicily.com
+Template:     kadence
+Version:      1.2.0
+Text Domain:  unmapped-sicily
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* =========================================================
+   ARCHIVI TASSONOMIA (destination + theme) — stile condiviso
+   ========================================================= */
+
+	.us-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+	.us-mono{font-family:ui-monospace,'SF Mono',Menlo,monospace;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem}
+	.us-serif{font-family:Georgia,'Times New Roman',serif}
+	.us-breadcrumb{color:var(--global-palette5,#888);padding:24px 0 8px}
+	.us-hero{position:relative;border-radius:6px;overflow:hidden;color:#fff;margin-bottom:48px;min-height:420px;display:flex;flex-direction:column;justify-content:space-between;padding:28px}
+	.us-hero>.us-hero__bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
+	.us-hero>.us-hero__tint{position:absolute;inset:0;z-index:1;opacity:.82}
+	.us-hero>*{position:relative;z-index:2}
+	.us-hero__label{opacity:.85}
+	.us-hero__index{color:rgba(255,255,255,.85);margin-bottom:10px}
+	.us-hero__bottom{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-end}
+	.us-hero__title{font-size:clamp(2.6rem,6vw,4.6rem);line-height:.98;margin:0;font-weight:500}
+	.us-hero__subtitle{font-style:italic;font-size:1.5rem;margin-top:6px;opacity:.92}
+	.us-hero__intro{max-width:440px;font-size:1.02rem;line-height:1.55}
+	.us-filter__kicker{color:var(--global-palette5,#888);margin-bottom:6px}
+	.us-filter__head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(0,0,0,.12);padding-bottom:14px;margin-bottom:18px}
+	.us-filter__q{font-size:1.6rem;margin:0;font-weight:500}
+	.us-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px}
+	.us-chip{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(0,0,0,.2);border-radius:3px;padding:9px 14px;text-decoration:none;color:inherit;font-size:.82rem;background:transparent;transition:all .15s}
+	.us-chip:hover{border-color:rgba(0,0,0,.5)}
+	.us-chip--active{background:#1b2a4a;color:#fff;border-color:#1b2a4a}
+	.us-chip__count{opacity:.6;font-size:.74rem}
+	.us-grid__head,.us-section__head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px}
+	.us-grid__title,.us-section__title{font-size:1.9rem;margin:0;font-weight:500}
+	.us-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:36px 30px;margin-bottom:64px}
+	.us-card{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+	.us-card__tile{position:relative;aspect-ratio:4/3;border-radius:4px;overflow:hidden;margin-bottom:16px}
+	.us-card__tile-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+	.us-card__tile-stripes{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.07) 0,rgba(255,255,255,.07) 2px,transparent 2px,transparent 12px)}
+	.us-card__tile-label{position:absolute;top:12px;left:12px;color:rgba(255,255,255,.85)}
+	.us-card__row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+	.us-card__name{font-size:1.55rem;margin:0;font-weight:500}
+	.us-card__count{color:var(--global-palette5,#888);white-space:nowrap}
+	.us-card__descriptor{color:var(--global-palette5,#888);margin:6px 0 10px}
+	.us-card__excerpt{font-size:.98rem;line-height:1.55;margin:0 0 16px}
+	.us-card__foot{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid rgba(0,0,0,.1);padding-top:12px;margin-top:auto}
+	.us-card__pillars{display:flex;flex-wrap:wrap;gap:10px}
+	.us-card__pillar{font-size:.74rem}
+	.us-card__browse{white-space:nowrap;font-size:.82rem}
+	/* ---- Layout località (articoli + sidebar) ---- */
+	.us-layout{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start;margin-bottom:48px}
+	.us-articles{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:34px 28px}
+	.us-article{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+	.us-article__thumb{position:relative;aspect-ratio:16/10;border-radius:4px;overflow:hidden;margin-bottom:14px}
+	.us-article__thumb img{width:100%;height:100%;object-fit:cover;display:block}
+	.us-article__title{font-size:1.28rem;line-height:1.2;margin:0 0 8px;font-weight:500}
+	.us-article__excerpt{font-size:.95rem;line-height:1.5;margin:0 0 12px}
+	.us-article__foot{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid rgba(0,0,0,.1);padding-top:10px;margin-top:auto}
+	.us-aside__box{position:sticky;top:24px}
+	.us-aside__title{font-size:1.1rem;margin:0 0 14px;font-weight:500;border-bottom:1px solid rgba(0,0,0,.12);padding-bottom:10px}
+	.us-sib{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;padding:11px 0;border-bottom:1px solid rgba(0,0,0,.07)}
+	.us-sib:hover .us-sib__name{text-decoration:underline}
+	.us-sib__dot{width:40px;height:40px;border-radius:4px;flex:0 0 auto;position:relative;overflow:hidden}
+	.us-sib__dot-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+	.us-sib__name{font-size:1rem;font-weight:500;margin:0;line-height:1.1}
+	.us-sib__count{font-size:.7rem;color:var(--global-palette5,#888);letter-spacing:.06em;text-transform:uppercase}
+	.us-pagination{margin:8px 0 64px}
+	.us-pagination .page-numbers{display:inline-block;padding:7px 12px;border:1px solid rgba(0,0,0,.2);margin:0 6px 6px 0;text-decoration:none;border-radius:3px;font-size:.85rem}
+	.us-pagination .current{background:#1b2a4a;color:#fff;border-color:#1b2a4a}
+	/* ---- Testo in fondo (read more) ---- */
+	.us-bottom{max-width:760px;margin:8px auto 80px}
+	.us-longtext{position:relative;overflow:hidden;font-size:1.04rem;line-height:1.75}
+	.us-longtext.is-collapsed{max-height:260px}
+	.us-longtext.is-collapsed::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--global-palette9,#fff))}
+	.us-longtext__toggle{margin-top:16px;background:none;border:none;padding:0;cursor:pointer;color:#1b2a4a}
+	@media(max-width:900px){.us-layout{grid-template-columns:1fr}.us-aside__box{position:static}}
+	/* ---- Filtro a sotto-riga (sub-chips) per gli archivi theme ---- */
+	.us-subchips{border-left:2px solid rgba(0,0,0,.15);padding-left:12px;margin:0 0 20px}
+	.us-subchips .us-chip{font-size:.78rem;padding:6px 11px}
+	/* ---- Breadcrumb dei filtri (torna indietro passo-passo) ---- */
+	.us-filtercrumb{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:0 0 26px}
+	.us-filtercrumb a{color:var(--global-palette2,#2d5a8a);text-decoration:none;border-bottom:1px solid transparent}
+	.us-filtercrumb a:hover{border-bottom-color:currentColor}
+	.us-filtercrumb__sep{opacity:.4}
+
