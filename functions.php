@@ -25,10 +25,11 @@ define( 'UNMAPPED_URI', get_stylesheet_directory_uri() );
  * Carica i moduli del tema.
  * Aggiungi qui i nuovi file man mano che il tema cresce.
  */
-require_once UNMAPPED_DIR . '/inc/enqueue.php';     // CSS e JS
-require_once UNMAPPED_DIR . '/inc/setup.php';       // Setup e supporti del tema
-require_once UNMAPPED_DIR . '/inc/taxonomies.php';  // destination + theme
-require_once UNMAPPED_DIR . '/inc/seo.php';         // canonical viste filtrate
+require_once UNMAPPED_DIR . '/inc/enqueue.php';      // CSS e JS
+require_once UNMAPPED_DIR . '/inc/setup.php';        // Setup e supporti del tema
+require_once UNMAPPED_DIR . '/inc/taxonomies.php';   // destination + theme + format
+require_once UNMAPPED_DIR . '/inc/seo.php';          // canonical viste filtrate
+require_once UNMAPPED_DIR . '/inc/n8n-seo-rest.php';  // SEO Yoast via REST per n8n (termini + post)
 
 /**
  * MODULI FUTURI (decommentare quando li creeremo):
